@@ -1,0 +1,30 @@
+
+name: Build Plugin
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@v4
+
+      - name: Java 21 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Plugin bauen
+        run: mvn --batch-mode clean package
+
+      - name: JAR bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: PlayerAdminPlugin
+          path: target/*.jar
