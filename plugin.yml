@@ -2,7 +2,7 @@ name: PlayerAdminPlugin
 version: 1.0.0
 main: de.example.playeradmin.PlayerAdminPlugin
 api-version: '1.21'
-author: ChatGPT
+author: SatyrBeatle2354
 description: GUI zur Verwaltung von Spielern
 commands:
   player:
