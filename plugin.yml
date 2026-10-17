@@ -1,0 +1,15 @@
+name: PlayerAdminPlugin
+version: 1.0.0
+main: de.example.playeradmin.PlayerAdminPlugin
+api-version: '1.21'
+author: ChatGPT
+description: GUI zur Verwaltung von Spielern
+commands:
+  player:
+    description: Öffnet das Spieler-Verwaltungsmenü
+    usage: /player <Name>
+    permission: playeradmin.use
+permissions:
+  playeradmin.use:
+    description: Darf das Spieler-Verwaltungsmenü verwenden
+    default: op
